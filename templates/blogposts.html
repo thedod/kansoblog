@@ -1,0 +1,11 @@
+{?rows}
+  <ul>
+  {#rows}
+    <li><a href="{baseURL}/{id}">{value}</a></li>
+  {/rows}
+    </ul>
+  {:else}
+  <p>No blog posts</p>
+{/rows}
+
+<p><a href="{baseURL}/add">Add new</a></p>
