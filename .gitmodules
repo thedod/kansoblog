@@ -1,3 +1,0 @@
-[submodule "deps/sanitize.js"]
-	path = deps/sanitize.js
-	url = https://github.com/gbirke/Sanitize.js.git
