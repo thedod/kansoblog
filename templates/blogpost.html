@@ -1,5 +1,10 @@
 <h1>{title}</h1>
-
-<p>{raw}</p>
-<hr>
-<p>{escaped}</p>
+<div id="post-body">
+<p>Html-quoted content (turn javascript on to view sanitized html):</p>
+<pre>{text}</pre>
+</div>
+<script type="text/javascript">
+$('#post-body').html(unescape('{escaped}')
+    ).html(
+    new Sanitize(Sanitize.Config.BASIC).clean_node($('#post-body').get(0)));
+</script>
