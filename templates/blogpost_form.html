@@ -1,8 +1,38 @@
 <h1>{form_title}</h1>
-
+<script>GENTICS_Aloha_base="{baseURL}/static/aloha-editor/";</script>
 <form method="POST" action="">
   <table>
     {form|s}
   </table>
   <input type="submit" value="Add" />
 </form>
+<script type="text/javascript" src="{baseURL}/static/aloha-editor/core/include.js"></script>
+<script type="text/javascript" src="{baseURL}/static/aloha-editor/plugins/com.gentics.aloha.plugins.Format/plugin.js"></script>
+<script type="text/javascript" src="{baseURL}/static/aloha-editor/plugins/com.gentics.aloha.plugins.Table/plugin.js"></script>
+<script type="text/javascript" src="{baseURL}/static/aloha-editor/plugins/com.gentics.aloha.plugins.List/plugin.js"></script>
+<script type="text/javascript" src="{baseURL}/static/aloha-editor/plugins/com.gentics.aloha.plugins.Link/plugin.js"></script>
+
+<script type="text/javascript">
+GENTICS.Aloha.settings = {
+	logLevels: {'error': true, 'warn': true, 'info': true, 'debug': true},
+	errorhandling : false,
+	ribbon: true,	
+	/* "i18n": {
+		// let the system detect the users language
+		//"acceptLanguage": '<?=$_SERVER['HTTP_ACCEPT_LANGUAGE']?>'
+		"acceptLanguage": 'de-de,de;q=0.8,it;q=0.6,en-us;q=0.7,en;q=0.2'
+	}, */
+	"plugins": {
+	 	"com.gentics.aloha.plugins.Link": {
+		  	target : '_blank',
+		  	rel : '_nofollow',
+		  	cssclass : 'external'
+		},
+  	}
+};
+
+$(function() {
+
+	$('#id_text').aloha();
+});  
+</script>
