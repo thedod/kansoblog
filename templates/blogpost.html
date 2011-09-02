@@ -8,3 +8,5 @@ $('#post-body').html(unescape('{escaped}')
     ).html(
     new Sanitize(Sanitize.Config.BASIC).clean_node($('#post-body').get(0)));
 </script>
+
+<p><a href="{baseURL}/edit/{_id}">Edit</a></p>
