@@ -446,3 +446,7 @@ td.actions .button {
     overflow: hidden;
 }
 
+#post-body {
+    max-width:600px;
+    padding:8px;
+}

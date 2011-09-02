@@ -1,3 +1,10 @@
+<script src="{baseURL}/static/js/sanitize_js/sanitize.js"></script>
+<script src="{baseURL}/static/js/sanitize_js/sanitize/config/basic.js"></script>
+<script type="text/javascript">
+    // Add nofollow and _blank to all links coming from user input
+    Sanitize.Config.BASIC.add_attributes['a'] = {rel:'nofollow', target:'_blank'};
+</script>
+     
 <h1>{title}</h1>
 <div id="post-body">
 <p>Html-quoted content (turn javascript on to view sanitized html):</p>
