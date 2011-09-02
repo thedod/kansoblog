@@ -1,3 +1,6 @@
 [submodule "deps/Sanitize.js"]
 	path = deps/Sanitize.js
 	url = https://github.com/gbirke/Sanitize.js.git
+[submodule "deps/jwysiwyg"]
+	path = deps/jwysiwyg
+	url = https://github.com/akzhan/jwysiwyg.git

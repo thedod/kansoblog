@@ -3,19 +3,19 @@
   <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
     <link rel="stylesheet" type="text/css" href="{baseURL}/static/style.css" /> 
+    <script src="{baseURL}/static/js/jquery-1.6.2.js"></script>
+    <script src="{baseURL}/kanso.js"></script>
     <title>{title}</title> 
   </head> 
   <body> 
     {>"session.html"/}
-    <h1 class="site name"><a href="{baseURL}/">I CAN BLOGZ</a></h1>
+    <h1 class="site name"><a href="{baseURL}/">{site_name}</a></h1>
     <div id="content">
       {content|s}
     </div>
-    <script src="{baseURL}/static/js/jquery-1.6.2.js"></script>
     <script src="{baseURL}/static/js/json2.js"></script>
     <script src="{baseURL}/static/js/jquery.simplemodal-1.4.1.js"></script>
     <script src="{baseURL}/static/js/sanitize_js/sanitize.js"></script>
     <script src="{baseURL}/static/js/sanitize_js/sanitize/config/basic.js"></script>
-    <script src="{baseURL}/kanso.js"></script>
   </body>
 </html>
