@@ -16,7 +16,7 @@
 $(function() {
 	$('#id_text').wysiwyg({
                 controls:window.wysiwyg_controls,
-                // Once we have RTL - // css: {direction:'rtl'},
+                {?config.rtl}css: {direction:'rtl'},{/config.rtl}
                 initialContent:''
         });
 	$('#id_title').focus();
