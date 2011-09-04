@@ -18,7 +18,7 @@ window.wysiwyg_controls = {
 	insertHorizontalRule: 	{ visible: true },
 	code:	 	{ visible: false },
 	createLink: 	{ visible: true },
-	insertImage: 	{ visible: false },
+	insertImage: 	{ visible: true },
 	insertTable: 	{ visible: false },
 	increaseFontSize: 	{ visible: false },
 	decreaseFontSize: 	{ visible: false },

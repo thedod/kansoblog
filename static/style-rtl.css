@@ -460,3 +460,12 @@ td.actions .button {
     max-width:600px;
     padding:8px;
 }
+
+#post-body img {
+    clear: both;
+    float: right;
+    border: none;
+    margin 0 0 8px 8px
+}
+
+#actions { clear:both }

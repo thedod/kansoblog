@@ -1,8 +1,8 @@
 <script src="{baseURL}/static/js/sanitize_js/sanitize.js"></script>
-<script src="{baseURL}/static/js/sanitize_js/sanitize/config/basic.js"></script>
+<script src="{baseURL}/static/js/sanitize_js/sanitize/config/relaxed.js"></script>
 <script type="text/javascript">
     // Add nofollow and _blank to all links coming from user input
-    Sanitize.Config.BASIC.add_attributes['a'] = {rel:'nofollow', target:'_blank'};
+    Sanitize.Config.RELAXED.add_attributes={a:{rel:'nofollow', target:'_blank'}};
 </script>
      
 <h1>{title}</h1>
@@ -17,11 +17,13 @@
 $(function() {
     $('#post-body').html(unescape('{escaped}')
         ).html(
-        new Sanitize(Sanitize.Config.BASIC).clean_node($('#post-body').get(0)));
+        new Sanitize(Sanitize.Config.RELAXED).clean_node($('#post-body').get(0)));
 });
 </script>
 
-<form method="POST" action="{basurl}/delete/{_id}">
-    <a href="{baseURL}/edit/{_id}">Edit</a>
-    <input type="submit" value="Delete">
-</form>
+<div id="actions">
+    <form method="POST" action="{basurl}/delete/{_id}">
+        <a href="{baseURL}/edit/{_id}">Edit</a>
+        <input type="submit" value="Delete">
+    </form>
+</div>
