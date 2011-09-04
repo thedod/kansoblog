@@ -7,13 +7,18 @@
      
 <h1>{title}</h1>
 <div id="post-body">
-<p>Html-quoted content (turn javascript on to view sanitized html):</p>
-{text}
+<img src="images/spinner-small.gif">
+<noscript>
+<h3 style="direction:ltr">Html-quoted content (turn javascript on to view sanitized html):</h3>
+<p style="direction:ltr">{text}</p>
+</noscript>
 </div>
 <script type="text/javascript">
-$('#post-body').html(unescape('{escaped}')
-    ).html(
-    new Sanitize(Sanitize.Config.BASIC).clean_node($('#post-body').get(0)));
+$(function() {
+    $('#post-body').html(unescape('{escaped}')
+        ).html(
+        new Sanitize(Sanitize.Config.BASIC).clean_node($('#post-body').get(0)));
+});
 </script>
 
 <form method="POST" action="{basurl}/delete/{_id}">
