@@ -32,5 +32,5 @@ window.wysiwyg_controls = {
 	h3: 	{ visible: false },
 	ltr: 	{ visible: false },
 	rtl: 	{ visible: false },
-	html: 	{ visible: false }
+	html: 	{ visible: true }
 }
