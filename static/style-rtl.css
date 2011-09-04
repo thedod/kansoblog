@@ -465,6 +465,8 @@ td.actions .button {
     clear: both;
     float: right;
     border: none;
+    max-height:150px;
+    max-width:200px;
     margin: 0 0 8px 8px
 }
 
