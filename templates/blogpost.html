@@ -16,8 +16,7 @@
 <script type="text/javascript">
 $(function() {
     $('#post-body').html(new Sanitize(Sanitize.Config.RELAXED).clean_node(
-        // $('<script/>') *does* execute :( Here's a quick fix
-        $(unescape('{escaped}').replace(/<script/gi,'&lt;script')).get(0)
+        $('<span>'+unescape('{escaped}').replace(/<script/gi,'&lt;script')+'</span>').get(0)
     ));
 });
 </script>
