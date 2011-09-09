@@ -453,12 +453,12 @@ td.actions .button {
     border: 0;
 }
 
-#post-body {
+#content {
     max-width:600px;
     padding:8px;
 }
 
-#post-body img {
+#content img {
     clear: both;
     float: left;
     border: none;

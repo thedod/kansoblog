@@ -1,29 +1,10 @@
-<script src="{baseURL}/static/js/sanitize_js/sanitize.js"></script>
-<script src="{baseURL}/static/js/sanitize_js/sanitize/config/relaxed.js"></script>
-<script type="text/javascript">
-    // Add nofollow and _blank to all links coming from user input
-    Sanitize.Config.RELAXED.add_attributes={a:{rel:'nofollow', target:'_blank'}};
-</script>
-     
-<h1>{title}</h1>
 <div id="post-body">
 <img src="{baseURL}/static/images/spinner-small.gif">
 <noscript>
 <h3 style="direction:ltr">Html-quoted content (turn javascript on to view sanitized html):</h3>
 <p style="direction:ltr">{text}</p>
 </noscript>
-</div>
 <script type="text/javascript">
-$(function() {
-    $('#post-body').html(new Sanitize(Sanitize.Config.RELAXED).clean_node(
-        $('<span>'+unescape('{escaped}').replace(/<script/gi,'&lt;script')+'</span>').get(0)
-    ));
-});
+    window.escaped_post='{escaped|s}';
 </script>
-
-<div id="actions">
-    <form method="POST" action="{basurl}/delete/{_id}">
-        <a href="{baseURL}/edit/{_id}">Edit</a>
-        <input type="submit" value="Delete">
-    </form>
 </div>

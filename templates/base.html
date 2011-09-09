@@ -4,18 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
     <link rel="stylesheet" type="text/css" href="{baseURL}/static/{?config.rtl}style-rtl.css{:else}style.css{/config.rtl}" /> 
     {#config.extra_css}<link rel="stylesheet" type="text/css" href="{baseURL}/static/{.}" />{~n}{/config.extra_css} 
-    <script src="{baseURL}/static/js/jquery-1.6.2.js"></script>
-    <script src="{baseURL}/kanso.js"></script>
     <title>{title}</title> 
   </head> 
   <body>
     <a target="_blank" href="http://github.com/thedod/kansoblog"><img id="github-ribbon" src="{baseURL}/static/images/{?config.rtl}github-ribbon-rtl.png{:else}github-ribbon.png{/config.rtl}" alt="Fork me on GitHub"></a>
     {>"session.html"/}
-    <h1 class="site name"><a href="{baseURL}/">{config.site_name}</a></h1>
+    <h1 class="site name"><a href="{baseURL}/">{config.site_name}</a> <span id="breadcrumbs">{breadcrumbs|s}</span></h1>
+    {>"flashmessages.html"/}
     <div id="content">
       {content|s}
     </div>
+    <div id="actions"></div>
+    <script src="{baseURL}/static/js/jquery-1.6.2.js"></script>
     <script src="{baseURL}/static/js/json2.js"></script>
-    <script src="{baseURL}/static/js/jquery.simplemodal-1.4.1.js"></script>
+    <link rel="stylesheet" href="{baseURL}/static/jwysiwyg/jquery.wysiwyg.css" type="text/css"/>
+    <script type="text/javascript" src="{baseURL}/static/jwysiwyg/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="{baseURL}/static/jwysiwyg/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="{baseURL}/static/jwysiwyg/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="{baseURL}/static/wysiwyg_controls.js"></script>
+    <script type="text/javascript" src="{baseURL}/static/js/jquery.simplemodal-1.4.1.js"></script>
+    <script type="text/javascript" src="{baseURL}/kanso.js"></script>
   </body>
 </html>

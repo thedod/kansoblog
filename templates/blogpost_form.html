@@ -1,25 +1,6 @@
-<h1><a href="{baseURL}/{id}">{form_title}</a></h1>
-{>"flashmessages.html"/}
-<link rel="stylesheet" href="{baseURL}/static/jwysiwyg/jquery.wysiwyg.css" type="text/css"/>
-<script type="text/javascript" src="{baseURL}/static/jwysiwyg/jquery.wysiwyg.js"></script>
-<script type="text/javascript" src="{baseURL}/static/jwysiwyg/controls/wysiwyg.link.js"></script>
-<script type="text/javascript" src="{baseURL}/static/jwysiwyg/controls/wysiwyg.image.js"></script>
-<script type="text/javascript" src="{baseURL}/static/wysiwyg_controls.js"></script>
-
 <form method="POST" action="">
   <table>
     {form|s}
   </table>
   <input type="submit" value="{button_label}" />
 </form>
-
-<script type="text/javascript">
-$(function() {
-	$('#id_text').wysiwyg({
-                controls:window.wysiwyg_controls,
-                {?config.rtl}css: {direction:'rtl'},{/config.rtl}
-                initialContent:''
-        });
-	$('#id_title').focus();
-});  
-</script>
