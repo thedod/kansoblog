@@ -1,36 +1,19 @@
 <!DOCTYPE html> 
 <html> 
   <head> 
-    <title>{config.site_name} - carousel</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
     <link rel="stylesheet" type="text/css" href="{baseURL}/static/{?config.rtl}style-rtl.css{:else}style.css{/config.rtl}" /> 
     {#config.extra_css}<link rel="stylesheet" type="text/css" href="{baseURL}/static/{.}" />{~n}{/config.extra_css} 
-    <script src="{baseURL}/static/js/jquery-1.6.2.js"></script>
-    <script src="{baseURL}/kanso.js"></script>
-    <script src="{baseURL}/static/js/sanitize_js/sanitize.js"></script>
-    <script src="{baseURL}/static/js/sanitize_js/sanitize/config/relaxed.js"></script>
-    <script type="text/javascript">
-        // Add nofollow and _blank to all links coming from user input
-        Sanitize.Config.RELAXED.add_attributes={a:{rel:'nofollow', target:'_blank'}};
-    </script>
+    <title>{config.site_name} - carousel</title> 
   </head> 
   <body>
-{?rows}
-  <ul>
-  {#rows}
-    <li id="{id}"><img src="{baseURL}/static/images/spinner-small.gif"></li>
-    <script type="text/javascript">
-        $(function() {
-            $('#{id}').html(new Sanitize(Sanitize.Config.RELAXED).clean_node(
-                $('<span>'+unescape('{value|s}').replace(/<script/gi,'&lt;script')+'</span>').get(0)
-            ));
-        });
-    </script>
-  {/rows}
-    </ul>
-  {:else}
-  <p>No blog posts</p>
-{/rows}
+    <div id="carousel-container">
+      <img src="{baseURL}/static/images/spinner-small.gif">
+    </div>
+    <script src="{baseURL}/static/js/jquery-1.6.2.js"></script>
     <script src="{baseURL}/static/js/json2.js"></script>
+    <script type="text/javascript" src="{baseURL}/static/jcarousel/lib/jquery.jcarousel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{baseURL}/static/jcarousel/skins/{config.carousel_skin}/skin.css" />
+    <script type="text/javascript" src="{baseURL}/kanso.js"></script>
   </body>
 </html>

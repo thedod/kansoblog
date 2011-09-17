@@ -461,7 +461,7 @@ td.actions .button {
     padding:8px;
 }
 
-#content img {
+#content img, #carousel-container img {
     clear: both;
     float: right;
     border: none;

@@ -4,3 +4,6 @@
 [submodule "deps/jwysiwyg"]
 	path = deps/jwysiwyg
 	url = https://github.com/akzhan/jwysiwyg.git
+[submodule "deps/jcarousel"]
+	path = deps/jcarousel
+	url = https://github.com/jsor/jcarousel.git
