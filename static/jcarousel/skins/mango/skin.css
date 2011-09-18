@@ -11,14 +11,14 @@
 }
 
 .jcarousel-skin-mango .jcarousel-container-horizontal {
-    width: 318px;
-    padding: 20px 40px;
+    width: 312px;
+    padding: 4px 40px;
 }
 
 .jcarousel-skin-mango .jcarousel-container-vertical {
-    width: 208px;
-    height: 318px;
-    padding: 40px 20px;
+    width: 176px;
+    height: 312px;
+    padding: 40px 4px;
 }
 
 .jcarousel-skin-mango .jcarousel-clip {
@@ -26,18 +26,18 @@
 }
 
 .jcarousel-skin-mango .jcarousel-clip-horizontal {
-    width:  318px;
-    height: 208px;
+    width:  312px;
+    height: 176px;
 }
 
 .jcarousel-skin-mango .jcarousel-clip-vertical {
-    width:  208px;
-    height: 318px;
+    width:  176px;
+    height: 312px;
 }
 
 .jcarousel-skin-mango .jcarousel-item {
-    width: 208px;
-    height: 208px;
+    width: 176px;
+    height: 176px;
 }
 
 .jcarousel-skin-mango .jcarousel-item-horizontal {
