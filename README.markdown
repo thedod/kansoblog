@@ -25,8 +25,7 @@ Note that Sanitize.js is a client-side thing: If you view this post with javascr
 
 If you want an iframe in some other site (e.g. as a text widget in wordpress) that shows something like "random tips",
 you can create a kansoblog instance for this purpose, fill it with some short items, and use the blog's `/carousel` page
-as that iframe. You can see an example of such a carousel (Hebrew, RTL) [here](http://tipsanook.thedod.iriscouch.com/carousel).
-This can also be used for tour dates, featured articles, and anything else that fits such a format.
+as that iframe. [Here's a demo](http://pastehtml.com/view/b7yg29qdk.html).
 
 Note that you can say in `lib/config.js` how many items you want to fetch for the carousel's query (e.g. latest 23 items). They will be randomize on the browser's side, but we fetch all of them - so a large number may take longer to load.
 
