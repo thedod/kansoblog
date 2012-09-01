@@ -1,3 +1,6 @@
+#### Note: This code was written for kanso 0.0.7 and needs to be [ported](http://kan.so/docs/Porting_from_Kanso_0.0.7) in order to work.
+
+
 This blog is a [couchapp](http://couchapp.org/) based on the [Kanso tutorial](http://kansojs.org/guides/getting_started.html), with several differences:
 
   * No comments (not sure whether I'll implement them and how).
